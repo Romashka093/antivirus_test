@@ -1,0 +1,367 @@
+/* normalize */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+/* base */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  background-color: #e5e5e5;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-repeat: no-repeat;
+  transition: 223ms ease-in-out;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+button,
+select,
+a {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+button {
+  transition: 223ms ease-in-out;
+}
+button:hover {
+  transition: 223ms ease-in-out;
+}
+/* custom stylesheet */
+
+.wrapper {
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: initial;
+}
+.header {
+  background-color: #000000;
+  color: #fff;
+}
+
+.heading {
+  max-width: 1140px;
+  display: flex;
+  place-items: center;
+  margin: 0 auto;
+  padding: 12px 0 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.heading__title {
+  font-weight: 500;
+  color: #ffb800;
+  margin: 0;
+  font-size: 21px;
+  line-height: 25px;
+}
+.heading__divider {
+  position: relative;
+  margin: 0 12px 0 10px;
+}
+.heading__divider::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 30px;
+  background-color: #fff;
+  top: -16px;
+}
+.heading__description {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 29px;
+}
+.heading__description sup {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: left;
+}
+.main {
+  max-width: 1140px;
+  margin: 0 auto 100px;
+  width: 100%;
+}
+.product__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  padding: 100px 20px 60px;
+}
+.product__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: initial;
+  gap: 30px;
+  padding: 0 20px;
+}
+.product__list-item {
+  position: relative;
+  background-color: #f3f5f6;
+  width: 360px;
+  height: 220px;
+}
+.item_amount {
+  position: absolute;
+  content: '';
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  width: 240px;
+  height: 100px;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  top: -50%;
+}
+
+.item_amount_best {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2b2929;
+  background-color: #ffb800;
+  width: 80px;
+  padding: 2px 0;
+}
+.item_amount_discount {
+  position: absolute;
+  content: '';
+  top: -14px;
+  left: -14px;
+}
+.item_price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 30px 0 0;
+}
+.item_price_description {
+  font-size: 18px;
+}
+.item_price_no_discount {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 0;
+  text-align: center;
+  text-decoration-line: line-through;
+  color: #929292;
+}
+.item_heading {
+  position: absolute;
+  content: '';
+  bottom: 50%;
+  margin-left: 50%;
+  transform: translate(-50%, 50%);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.item_heading_name {
+  font-weight: 400;
+  font-size: 18px;
+}
+.item_heading_decsription {
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.item_heading_button {
+  height: 50px;
+  width: 190px;
+  border-radius: 25px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(
+    0deg,
+    #130999 -0.01%,
+    #174d8f 35.01%,
+    #1a7f87 64.91%,
+    #1c9e83 87.44%,
+    #1daa81 99.99%
+  );
+  transition: 223ms ease-in-out;
+}
+
+.item_heading_button:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.item_heading_button_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  padding: 8px 0 10px;
+}
+.footer__content {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+.footer__content_title {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #ffb800;
+}
+.footer__content_description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+
+  color: #ffffff;
+}
